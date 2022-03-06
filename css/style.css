@@ -1,0 +1,158 @@
+/* reset */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.debug{
+    border: 1px solid black;
+}
+.flex-container{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-items: center;
+}
+/* header */
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+}
+.search, .profile{
+    flex: 0 1 25%
+}
+nav{
+    flex: 0 1 50%;
+}
+
+/* input */
+.chevron-box, input{
+    margin-left: 5px;
+    background-color: rgb(226, 226, 226);
+    height: 25px;
+    line-height: 25px;
+    border-radius: 5px;
+    border: none;
+}
+.chevron-box{
+    cursor: pointer;
+    text-align: center;
+    width: 25px;
+}
+input{
+    width: 180px;
+    padding-left: 30px;
+}
+.input-search{
+   position: relative;
+}
+.fa-search{
+    position: absolute;
+    top: 5px;
+    left: 10px;
+}
+/* nav */
+nav ul.flex-container{
+    list-style: none;
+    justify-content: space-around;
+    text-align: center;
+    color: rgb(175, 175, 175);
+    font-size: 15px;
+}
+nav ul li{
+    cursor: pointer;
+}
+nav ul.flex-container .fas, nav ul.flex-container .far{
+    font-size: 25px;
+}
+.flex-container .active{
+    color: #1172ed;
+}
+/* profile */
+.profile{
+    color: white;
+    font-size: 20px;
+    text-align: right;
+    padding-right: 10px;
+}
+.profile .far{
+    background-color: #32a771;
+    border-radius: 5px;
+    padding: 10px;
+}
+/* main */
+main{
+    height: calc(100vh - 60px);
+    margin-top: 60px;
+    width: 100%;
+    position: relative;
+    overflow-y: auto;
+}
+.cog{
+    position: absolute;
+    top: 40px;
+    right: 20px;
+    color: rgb(175, 175, 175);
+}
+main.flex-container{
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 80px;
+}
+.row-left, .row-right{
+    width: 400px;
+    height: 400px;
+}
+.row-left.flex-container{
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    gap: 10px;
+}
+.row-left .box{
+    text-align: center;
+    flex: 0 1 calc(50% - 10px);
+    padding-top: 20px;
+}
+.box .fas, .box .far{
+    background-color: #1172ed;
+    color: white;
+    height: 120px;
+    width: 120px;
+    text-align: center;
+    line-height: 120px;
+    border-radius: 15px;
+    font-size: 40px
+}
+.box p{
+    font-size: 20px;
+    color: rgb(175, 175, 175);
+    padding-top: 10px;
+}
+.box .fa-video{
+    background-color: orange;
+}
+.row-right{
+    border: 1px solid #d1d1d1;
+    border-radius: 10px;
+    overflow: hidden;
+}
+.top, .bottom{
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+}
+.top{
+    height: 30%;
+    color: white;
+    width: 100%;
+    background-color: rgb(5, 5, 73);
+}
+.bottom{
+    height: 70%;
+    color: rgb(175, 175, 175);
+}
